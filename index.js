@@ -159,15 +159,22 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 hint - you can use the .includes method to help you solve this */
 
 function filterByWord(arrayProvided, flavor){
+    let filteredArray = [];
     for(let i = 0; i < arrayProvided.length; i++){
-        if(flavor === arrayProvided[i]){
-            var arrayProvidedFiltered = arrayProvided.includes(flavor);
-        }
-        return arrayProvidedFiltered;
+       if(arrayProvided[i].includes(flavor)){
+           filteredArray.push(arrayProvided[i]);
+       } 
+        
+        
+        
     }
+   return filteredArray;
 };
-let myNewArray = filterByWord(originalFlavors, "Chocolate");
-console.log(myNewArray);
+console.log(filterByWord(originalFlavors, "Chocolate"));
+
+
+
+
 
 
 
@@ -184,9 +191,9 @@ and should return the average number of words per item in the array.
 
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
-function getAverageWordLength(/*code here*/){
+function getAverageWordLength(){
 
-    /*code here*/
+    
 
 }
 
